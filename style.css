@@ -49,3 +49,28 @@ html[lang="zh-CN"] .project-info p{font-weight:500}
 
 .art-number{position:absolute;right:24%;bottom:24%;font-family:Georgia,serif;font-style:italic;font-size:clamp(48px,7.5vw,96px);line-height:1;letter-spacing:-3px;color:#f8f3df;transform:rotate(-11deg);z-index:4;user-select:none}
 @media(max-width:720px){.art-number{right:27%;top:22%;bottom:auto;font-size:48px;letter-spacing:-2px}}
+
+/* Let the introduction occupy the left column at the same scale as the artwork. */
+.hero-copy{min-width:0}
+.hero-copy .eyebrow{font-size:16px;margin-bottom:30px}
+h1.profile-name{font-size:clamp(88px,12vw,160px);line-height:1.15;flex-wrap:nowrap}
+html[lang="en"] h1.profile-name{font-size:clamp(60px,8vw,106px)}
+.hero-description{font-size:24px;line-height:1.7;margin:26px 0 30px}
+.profile-socials{gap:22px;margin-bottom:32px}
+.follow-label{font-size:18px}
+.social-icon{width:30px;height:34px}
+.brand-icon{width:28px;height:28px}
+.hero-copy .button{font-size:18px;padding:20px 28px;gap:70px}
+.hero-foot{font-size:14px}
+@media(max-width:720px){
+  .hero-copy .eyebrow{font-size:13px;margin-bottom:24px}
+  h1.profile-name{font-size:clamp(72px,26vw,112px)}
+  html[lang="en"] h1.profile-name{font-size:clamp(48px,15.5vw,90px)}
+  .hero-description{font-size:20px;line-height:1.7;margin:24px 0 26px}
+  .profile-socials{gap:16px;margin-bottom:28px}
+  .follow-label{font-size:16px}
+  .social-icon{width:26px;height:30px}
+  .brand-icon{width:26px;height:26px}
+  .hero-copy .button{font-size:17px;padding:18px 24px;gap:48px}
+  .hero-foot{font-size:12px}
+}
