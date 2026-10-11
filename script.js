@@ -27,11 +27,11 @@ const translations = {
     artLineOne: 'the best people', artLineTwo: 'in life are free.',
     viewProjects: '看看我的项目', artLabel: '由绿色圆形、轨道、字样 felixzhou 和数字 24 组成的抽象个人标识',
     explore: '向下探索', aboutTitle: '关于我',
-    aboutIndex: '01 / 关于', projectsIndex: '02 / 项目', essaysSectionIndex: '03 / 随笔', photographyIndex: '04 / 摄影', contactIndex: '05 / 联系',
+
     bioIntro: '我是周方璟，哈工大（深圳）计算机科学与技术专业大二学生。',
     bioSite: '这里有我的项目、照片和随笔。',
     bioStudy: '最近在学数字逻辑设计、机器学习、离散数学、概率论和大学物理。',
-    bioFootball: '我是巴塞罗那和深圳新鹏城的球迷，喜欢去现场看比赛。在哈工大（深圳）校队踢前腰和左边锋。',
+    bioFootball: '我是巴塞罗那和深圳新鹏城的球迷。在哈工大（深圳）校队踢前腰和左边锋。',
     bioMusic: '喜欢唱歌，平时主要听欧美流行，常听 Taylor Swift、Ed Sheeran、The Weeknd、Ariana Grande 和 Sabrina Carpenter。看过陶喆和单依纯的现场演唱会。',
     bioPotter: '《哈利·波特》迷，斯莱特林学生。',
     educationTitle: '教育经历', schoolShenzhen: '深圳中学', educationUniversityDates: '2025.9–2029.6（预计）',
@@ -63,11 +63,11 @@ const translations = {
     artLineOne: 'the best people', artLineTwo: 'in life are free.',
     viewProjects: 'Explore my projects', artLabel: 'A felixzhou wordmark with the number 24, a green circle, and orbital lines',
     explore: 'Scroll to explore', aboutTitle: 'About me',
-    aboutIndex: '01 / ABOUT', projectsIndex: '02 / SELECTED PROJECTS', essaysSectionIndex: '03 / ESSAYS', photographyIndex: '04 / PHOTOGRAPHY', contactIndex: '05 / SAY HELLO',
+
     bioIntro: "I'm Felixzhou, a second-year computer science student at HIT Shenzhen.",
     bioSite: "This is where I share my projects, photos, and essays.",
     bioStudy: 'Currently studying: Digital Logic Design, Machine Learning (ML), Discrete Mathematics, Probability Theory, University Physics, and more.',
-    bioFootball: 'I support FC Barcelona and Shenzhen Peng City, and enjoy watching matches in person. I play as an attacking midfielder and left winger for the HIT Shenzhen university team.',
+    bioFootball: 'I support FC Barcelona and Shenzhen Peng City. I play as an attacking midfielder and left winger for the HIT Shenzhen university team.',
     bioMusic: 'I enjoy singing and mostly listen to Western pop: Taylor Swift, Ed Sheeran, The Weeknd, Ariana Grande, and Sabrina Carpenter. I have also seen David Tao and Shan Yichun live in concert.',
     bioPotter: "I'm also a Harry Potter fan and a Slytherin.",
     educationTitle: 'Education', schoolShenzhen: 'Shenzhen Middle School', educationUniversityDates: '2025.9–2029.6 (expected)',
@@ -121,7 +121,6 @@ function setLanguage(next) {
     element.setAttribute('aria-label', label);
     if (element.classList.contains('social-icon')) element.title = label;
   });
-  document.querySelector('#sponsor-image').alt = copy.sponsorImageAlt;
   document.title = copy.title;
   document.querySelector('meta[name="description"]').content = copy.description;
   languageToggle.textContent = language === 'zh' ? 'English' : '中文';
@@ -274,3 +273,16 @@ if (photographyWorks.length) {
   photographyGrid.hidden = false;
   document.querySelector('.photography-empty').hidden = true;
 }
+
+const siteHeader = document.querySelector('.site-header');
+let headerFrame = null;
+function updateHeaderPosition() {
+  const shift = Math.min(1, Math.max(0, window.scrollY / 180));
+  siteHeader.style.setProperty('--brand-shift', shift.toFixed(4));
+  siteHeader.classList.toggle('is-scrolled', window.scrollY > 10);
+  headerFrame = null;
+}
+window.addEventListener('scroll', () => {
+  if (headerFrame === null) headerFrame = requestAnimationFrame(updateHeaderPosition);
+}, { passive: true });
+updateHeaderPosition();
