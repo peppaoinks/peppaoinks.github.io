@@ -30,7 +30,6 @@ const translations = {
 
     bioIntro: '我是周方璟，哈工大（深圳）计算机科学与技术专业大二学生。',
     bioSite: '这里有我的项目、照片和随笔。',
-    bioStudy: '最近在学数字逻辑设计、机器学习、离散数学、概率论和大学物理。',
     bioFootball: '我是巴塞罗那和深圳新鹏城的球迷。在哈工大（深圳）校队踢前腰和左边锋。',
     bioMusic: '喜欢唱歌，平时主要听欧美流行，常听 Taylor Swift、Ed Sheeran、The Weeknd、Ariana Grande 和 Sabrina Carpenter。看过陶喆和单依纯的现场演唱会。',
     bioPotter: '《哈利·波特》迷，斯莱特林学生。',
@@ -66,7 +65,6 @@ const translations = {
 
     bioIntro: "I'm Felixzhou, a second-year computer science student at HIT Shenzhen.",
     bioSite: "This is where I share my projects, photos, and essays.",
-    bioStudy: 'Currently studying: Digital Logic Design, Machine Learning (ML), Discrete Mathematics, Probability Theory, University Physics, and more.',
     bioFootball: 'I support FC Barcelona and Shenzhen Peng City. I play as an attacking midfielder and left winger for the HIT Shenzhen university team.',
     bioMusic: 'I enjoy singing and mostly listen to Western pop: Taylor Swift, Ed Sheeran, The Weeknd, Ariana Grande, and Sabrina Carpenter. I have also seen David Tao and Shan Yichun live in concert.',
     bioPotter: "I'm also a Harry Potter fan and a Slytherin.",
