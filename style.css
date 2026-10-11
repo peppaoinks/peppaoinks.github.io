@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600&display=swap');
 
 :root{--bg:#f5f4ee;--text:#242720;--muted:#777a70;--line:#d9dbd1;--orange:#e66536;--card:#eeeee5;--art:#e8ebde;--paper:#fafaf5;--font:"DM Sans","PingFang SC","Microsoft YaHei",sans-serif;color-scheme:light}
 :root[data-theme="dark"]{--bg:#20231e;--text:#f0f1e8;--muted:#b1b4a7;--line:#41463b;--orange:#ff956c;--card:#2c3028;--art:#353d30;--paper:#e8ebdf;color-scheme:dark}
@@ -36,3 +36,13 @@ h2,h3{font-family:var(--font-reading);font-weight:400;letter-spacing:-.025em}
 .project-info p{line-height:1.85}
 .site-header,.button,.eyebrow,.hero-art,.hero-foot,.section-index,.text-link,.project-meta,.repo-name,.visual-label,.visual-number,.paper small,.profile-socials,.bio-github,.contact-emails,.sponsor,.essays-empty div>span,footer{font-family:var(--font)}
 @media(max-width:720px){h1.profile-name{letter-spacing:-.025em}.about-description{font-size:13px}.about-description .bio-detail{font-size:12px}}
+
+/* Give Chinese serif text a fuller, more substantial stroke weight. */
+html[lang="zh-CN"] h1.profile-name,
+html[lang="zh-CN"] h2,
+html[lang="zh-CN"] h3{font-weight:600;letter-spacing:-.02em}
+html[lang="zh-CN"] .hero-description,
+html[lang="zh-CN"] .about-description,
+html[lang="zh-CN"] .essays-intro,
+html[lang="zh-CN"] .essays-empty p,
+html[lang="zh-CN"] .project-info p{font-weight:500}
