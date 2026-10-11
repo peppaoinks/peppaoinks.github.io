@@ -1,9 +1,14 @@
 // Life photos are ordered from childhood to the present, followed by the video.
 const personalPhotos = [
   { src: 'assets/gallery/childhood-flowers.webp', altZh: '在深圳戴着彩色花环的童年照片', altEn: 'A childhood photo wearing a colorful garland in Shenzhen', captionZh: '深圳', captionEn: 'Shenzhen', date: '2010-07-17' },
+  { src: 'assets/gallery/jiangshan-childhood.webp', altZh: '在浙江江山穿黄色毛衣的童年照片', altEn: 'A childhood photo in a yellow sweater in Jiangshan, Zhejiang', captionZh: '浙江 · 江山', captionEn: 'Jiangshan · Zhejiang', date: '2011-02-04' },
   { src: 'assets/gallery/childhood-panda.webp', altZh: '在上海外滩戴着熊猫帽的童年照片', altEn: 'A childhood photo wearing a panda hat at the Bund in Shanghai', captionZh: '上海 · 外滩', captionEn: 'Shanghai · The Bund' },
+  { src: 'assets/gallery/xuefu-primary.webp', altZh: '在深圳学府小学参加舞台表演的照片', altEn: 'On stage at Xuefu Primary School, Shenzhen', captionZh: '深圳 · 学府小学', captionEn: 'Shenzhen · Xuefu Primary School', date: '2014-06-15' },
   { src: 'assets/gallery/chibi-childhood.webp', altZh: '在湖北赤壁穿黄色上衣的童年照片', altEn: 'A childhood photo in a yellow shirt in Chibi, Hubei', captionZh: '湖北 · 赤壁', captionEn: 'Chibi · Hubei' },
   { src: 'assets/gallery/bloxham.webp', altZh: '在英国牛津郡 Bloxham 的照片', altEn: 'In Bloxham, Oxfordshire, United Kingdom', captionZh: '英国 · Oxfordshire · Bloxham', captionEn: 'Bloxham · Oxfordshire · United Kingdom', date: '2018-08-26' },
+  { src: 'assets/gallery/london-trafalgar.webp', altZh: '在伦敦特拉法加广场戴着 London 帽子的照片', altEn: 'Wearing a London beanie at Trafalgar Square, London', captionZh: '英国 · 伦敦 · 特拉法加广场', captionEn: 'Trafalgar Square · London · United Kingdom', date: '2018-08-26' },
+  { src: 'assets/gallery/nigang-classroom.webp', altZh: '在深圳中学泥岗校区教室黑板前的照片', altEn: 'By a classroom blackboard at Shenzhen Middle School, Nigang Campus', captionZh: '深圳 · 深圳中学泥岗校区', captionEn: 'Shenzhen Middle School · Nigang Campus' },
+  { src: 'assets/gallery/nigang-football.webp', altZh: '在深圳中学泥岗校区足球场的合照', altEn: 'A group photo on the football field at Shenzhen Middle School, Nigang Campus', captionZh: '深圳 · 深圳中学泥岗校区', captionEn: 'Shenzhen Middle School · Nigang Campus' },
   { src: 'assets/gallery/shenzhen-middle-school.webp', altZh: '在深圳中学泥岗校区红砖建筑前的照片', altEn: 'By the red-brick buildings at Shenzhen Middle School, Nigang Campus', captionZh: '深圳 · 深圳中学泥岗校区', captionEn: 'Shenzhen Middle School · Nigang Campus', date: '2024-07-10' },
   { src: 'assets/gallery/seaside.webp', altZh: '在三亚湾海边的照片', altEn: 'By the sea at Sanya Bay', captionZh: '三亚湾', captionEn: 'Sanya Bay', date: '2026-02-01' },
   { src: 'assets/gallery/life-01.webp', altZh: '在深圳福田香格里拉的照片', altEn: 'At Futian Shangri-La, Shenzhen', captionZh: '深圳 · 福田香格里拉', captionEn: 'Shenzhen · Futian Shangri-La', date: '2026-04-09' },
