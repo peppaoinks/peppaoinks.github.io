@@ -28,3 +28,7 @@
 ## 图标来源
 
 社交平台图标来自 [Simple Icons](https://github.com/simple-icons/simple-icons)，采用 CC0 授权。品牌名称及标识归各自权利人所有。
+
+## 字体
+
+标题与阅读正文使用 Lora / Noto Serif SC 衬线字体，营造接近 Claude 的阅读风格；导航等界面文字保留无衬线字体。字体通过 Google Fonts 加载，无法连接时回退到系统宋体或 Georgia。原有 fz 标识字体保持不变。
