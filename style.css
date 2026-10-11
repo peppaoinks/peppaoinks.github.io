@@ -220,3 +220,41 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
   .site-header .header-actions{gap:4px}
   .site-header .language-toggle{font-size:10px;min-width:35px}
 }
+
+/* Campus map: local controls, with map tiles requested only when visible. */
+.campus-map{margin-top:30px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--card);font-family:var(--font)}
+.campus-map-toolbar{display:flex;align-items:center;gap:24px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.campus-map-heading{font-size:17px;font-weight:600;white-space:nowrap}
+.campus-map-schools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.campus-map button{color:var(--text);background:transparent;border:1px solid transparent;border-radius:4px;padding:8px 12px;cursor:pointer;font-size:13px}
+.campus-map button:hover,.campus-map button[aria-pressed="true"]{border-color:var(--line);background:var(--bg)}
+.campus-number{font-size:11px;margin-right:8px;color:var(--muted);font-variant-numeric:tabular-nums}
+.campus-map .campus-map-reset{margin-left:auto;border-color:var(--line);white-space:nowrap}
+.campus-map-stage{position:relative;isolation:isolate}
+.campus-map-canvas{height:390px;background:var(--card);z-index:0}
+.campus-map-canvas .leaflet-tile-pane{filter:grayscale(.8) sepia(.2) hue-rotate(35deg) saturate(.8)}
+:root[data-theme="dark"] .campus-map-canvas .leaflet-tile-pane{filter:grayscale(1) invert(.92) sepia(.3) hue-rotate(75deg) saturate(1.4) brightness(.8)}
+.campus-map-city{position:absolute;top:20px;right:20px;z-index:500;display:grid;gap:6px;padding:12px 14px;background:var(--bg);border:1px solid var(--line);border-radius:4px;pointer-events:none}
+.campus-map-city span:first-child{font-size:11px;letter-spacing:2px;font-weight:600}
+.campus-map-city span:last-child{font-family:monospace;font-size:10px;color:var(--muted)}
+.campus-map-status{position:absolute;bottom:32px;left:20px;right:20px;z-index:500;width:fit-content;max-width:calc(100% - 40px);font-size:13px;line-height:1.6;margin:0;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:8px 12px;pointer-events:none}
+.campus-map-status[hidden]{display:none}
+.campus-map-footer{display:flex;justify-content:space-between;gap:16px;padding:12px 20px;font-size:12px;line-height:1.6;color:var(--muted);border-top:1px solid var(--line)}
+.campus-map-footer a{white-space:nowrap;color:var(--text)}
+.campus-map .campus-pin{border:1px solid #e6ebe3;border-radius:50%;background:#1a472a;color:#fff;display:grid;place-items:center;box-shadow:0 0 0 6px #36714835,0 2px 7px #0c1b1430;font-family:var(--font);font-size:11px;font-weight:600}
+.campus-map .leaflet-popup-content-wrapper,.campus-map .leaflet-popup-tip{background:var(--bg);color:var(--text)}
+.campus-map .leaflet-popup-content{font-family:var(--font);line-height:1.6;min-width:170px}
+.campus-map .leaflet-popup-content strong{display:block;font-size:15px;font-weight:600}
+.campus-map .leaflet-popup-content span{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.campus-map .leaflet-control-zoom a{background:var(--bg);color:var(--text);border-color:var(--line)}
+.campus-map .leaflet-control-attribution{background:var(--bg);color:var(--muted);font-family:var(--font);font-size:10px}
+.campus-map .leaflet-control-attribution a{color:var(--text)}
+@media(max-width:720px){
+  .campus-map-toolbar{flex-wrap:wrap;gap:12px;padding:14px}
+  .campus-map-schools{order:3;flex-basis:100%;gap:6px}
+  .campus-map button{padding:8px;font-size:12px}
+  .campus-map-heading{font-size:16px}
+  .campus-map-canvas{height:330px}
+  .campus-map-city{top:12px;right:12px;padding:9px 10px}
+  .campus-map-footer{padding:12px 14px;font-size:11px}
+}

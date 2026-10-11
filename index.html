@@ -7,8 +7,9 @@
   <meta name="description" content="周方璟，哈尔滨工业大学（深圳）计算机科学与技术专业大二学生。个人项目、随笔与日常。">
   <title>周方璟 · 个人主页</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=felixzhou">
-  <link rel="stylesheet" href="style.css?v=20261011-grow">
-  <script src="script.js?v=20261011-grow" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261011-map">
+  <script src="script.js?v=20261011-map" defer></script>
+  <script src="assets/education-map.js?v=20261011-map" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
@@ -67,6 +68,22 @@
           <div class="education-row"><p data-i18n="schoolShenzhen">深圳中学</p><span class="education-dates">2019.9–2025.6</span></div>
           <div class="education-row"><p data-i18n="university">哈尔滨工业大学（深圳）</p><span class="education-dates" data-i18n="educationUniversityDates">2025.9–2029.6（预计）</span></div>
         </div>
+      </div>
+      <div class="campus-map" role="region" aria-label="校园地图" data-i18n-label="campusMapTitle">
+        <div class="campus-map-toolbar">
+          <span class="campus-map-heading" data-i18n="campusMapTitle">校园地图</span>
+          <div class="campus-map-schools">
+            <button type="button" data-campus="0" aria-pressed="false"><span class="campus-number">01</span><span data-i18n="schoolShenzhen">深圳中学</span></button>
+            <button type="button" data-campus="1" aria-pressed="false"><span class="campus-number">02</span><span data-i18n="campusUniversity">哈工大（深圳）</span></button>
+          </div>
+          <button class="campus-map-reset" type="button" data-i18n="campusOverview">查看全图</button>
+        </div>
+        <div class="campus-map-stage">
+          <div class="campus-map-canvas" aria-label="深圳校园位置，可通过按钮缩放和切换校园" data-i18n-label="campusMapLabel"></div>
+          <div class="campus-map-city" aria-hidden="true"><span>SHENZHEN</span><span>22.58° N / 114.03° E</span></div>
+          <p class="campus-map-status" role="status">地图加载中…</p>
+        </div>
+        <div class="campus-map-footer"><span data-i18n="campusMapHint">点击校园标记查看位置</span><a href="https://www.openstreetmap.org/#map=12/22.5792/114.0280" target="_blank" rel="noopener noreferrer"><span data-i18n="campusOpenMap">在地图中打开</span> ↗</a></div>
       </div>
     </section>
 
