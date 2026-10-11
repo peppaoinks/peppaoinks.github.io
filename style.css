@@ -74,3 +74,25 @@ html[lang="en"] h1.profile-name{font-size:clamp(60px,8vw,106px)}
   .hero-copy .button{font-size:17px;padding:18px 24px;gap:48px}
   .hero-foot{font-size:12px}
 }
+
+.hero-copy .profile-socials{margin-bottom:22px}
+.hero-contacts{display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:20px;row-gap:9px;font-family:var(--font);font-size:18px;line-height:1.5;margin-bottom:28px;scroll-margin-top:30px}
+.hero-contacts .contact-label{font-size:13px;color:var(--muted);padding-top:4px}
+.hero-contacts .email-label{grid-row:span 2}
+.hero-contacts a{width:fit-content;overflow-wrap:anywhere}
+.hero-contacts a:hover{color:var(--orange)}
+.hero-contacts a>span{color:var(--muted);margin-left:10px}
+.wechat-id{user-select:all}
+.about-content{grid-template-columns:.7fr 1.3fr}
+.about-description{font-size:22px;line-height:1.85}
+.about-description p{margin-bottom:24px}
+.about-description .bio-detail{font-size:18px;line-height:1.9;margin-bottom:18px}
+.bio-github{font-size:16px}
+@media(max-width:720px){
+  .hero-contacts{font-size:16px;column-gap:16px;margin-bottom:26px}
+  .hero-contacts .contact-label{font-size:12px;padding-top:3px}
+  .about-content{grid-template-columns:1fr}
+  .about-description{font-size:20px;line-height:1.85}
+  .about-description .bio-detail{font-size:17px;line-height:1.85}
+  .bio-github{font-size:15px}
+}
