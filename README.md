@@ -6,7 +6,7 @@
 
 当前展示：周方璟 / Felixzhou，哈尔滨工业大学（深圳）计算机科学与技术专业大二。
 
-小红书、知乎和 GitHub 已连接；bilibili、X 链接和赞助二维码尚待本人提供。随笔集目前为空，不含示例文章。
+小红书、知乎、LinkedIn 和 GitHub 已连接；bilibili 链接和赞助二维码尚待本人提供。随笔集目前为空，不含示例文章。
 
 ## 修改内容
 
@@ -27,7 +27,7 @@
 
 ## 图标来源
 
-社交平台图标来自 [Simple Icons](https://github.com/simple-icons/simple-icons)，采用 CC0 授权。品牌名称及标识归各自权利人所有。
+除自行绘制的 LinkedIn 字母图标外，社交平台图标来自 [Simple Icons](https://github.com/simple-icons/simple-icons)，采用 CC0 授权。品牌名称及标识归各自权利人所有。
 
 ## 字体
 
