@@ -267,3 +267,5 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
   .campus-map-city{top:12px;right:12px;padding:9px 10px}
   .campus-map-footer{padding:12px 14px;font-size:11px}
 }
+
+.about-description .sorting-link{display:inline-block;margin-left:.35em;border-bottom:0;white-space:nowrap;text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px}
