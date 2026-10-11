@@ -1,14 +1,14 @@
 // Life photos are ordered from childhood to the present, followed by the video.
 const personalPhotos = [
-  { src: 'assets/gallery/childhood-flowers.jpg', altZh: '在深圳戴着彩色花环的童年照片', altEn: 'A childhood photo wearing a colorful garland in Shenzhen', captionZh: '深圳 · 童年', captionEn: 'Shenzhen · Childhood', date: '2010-07-17' },
-  { src: 'assets/gallery/childhood-panda.jpg', altZh: '在上海外滩戴着熊猫帽的童年照片', altEn: 'A childhood photo wearing a panda hat at the Bund in Shanghai', captionZh: '上海 · 外滩', captionEn: 'Shanghai · The Bund' },
-  { src: 'assets/gallery/chibi-childhood.jpg', altZh: '在湖北赤壁穿黄色上衣的童年照片', altEn: 'A childhood photo in a yellow shirt in Chibi, Hubei', captionZh: '湖北 · 赤壁', captionEn: 'Chibi · Hubei' },
-  { src: 'assets/gallery/bloxham.jpg', altZh: '在英国牛津郡 Bloxham 的照片', altEn: 'In Bloxham, Oxfordshire, United Kingdom', captionZh: '英国 · Oxfordshire · Bloxham', captionEn: 'Bloxham · Oxfordshire · United Kingdom', date: '2018-08-26' },
-  { src: 'assets/gallery/shenzhen-middle-school.jpg', altZh: '在深圳中学泥岗校区红砖建筑前的照片', altEn: 'By the red-brick buildings at Shenzhen Middle School, Nigang Campus', captionZh: '深圳 · 深圳中学泥岗校区', captionEn: 'Shenzhen Middle School · Nigang Campus', date: '2024-07-10' },
-  { src: 'assets/gallery/seaside.jpg', altZh: '三亚湾旅行时的海边照片', altEn: 'By the sea during a trip to Sanya Bay', captionZh: '三亚湾 · 旅行', captionEn: 'Sanya Bay · Travel', date: '2026-02-01' },
-  { src: 'assets/gallery/life-01.jpg', altZh: '在深圳福田香格里拉参加 QS 教育峰会', altEn: 'At the QS education summit at Futian Shangri-La, Shenzhen', captionZh: '深圳 · 福田香格里拉 · QS 教育峰会', captionEn: 'Futian Shangri-La, Shenzhen · QS Education Summit', date: '2026-04-09' },
-  { src: 'assets/gallery/life-02.jpg', altZh: '穿着巴萨球衣，在哈尔滨工业大学深圳实验学校担任英语老师时与学生合影', altEn: 'Wearing a Barcelona shirt with students while teaching English at Harbin Institute of Technology Shenzhen Experimental School', captionZh: '深圳 · 哈尔滨工业大学深圳实验学校 · 英语教学', captionEn: 'Shenzhen · HIT Shenzhen Experimental School · Teaching English', date: '2026-04-15' },
-  { type: 'video', src: 'assets/gallery/life-video.mp4', poster: 'assets/gallery/life-video-poster.jpg', altZh: '在香港中港城拍摄的生活视频', altEn: 'A personal video filmed at China Hong Kong City', captionZh: '香港 · 中港城', captionEn: 'Hong Kong · China Hong Kong City', date: '2026-10-01' }
+  { src: 'assets/gallery/childhood-flowers.webp', altZh: '在深圳戴着彩色花环的童年照片', altEn: 'A childhood photo wearing a colorful garland in Shenzhen', captionZh: '深圳', captionEn: 'Shenzhen', date: '2010-07-17' },
+  { src: 'assets/gallery/childhood-panda.webp', altZh: '在上海外滩戴着熊猫帽的童年照片', altEn: 'A childhood photo wearing a panda hat at the Bund in Shanghai', captionZh: '上海 · 外滩', captionEn: 'Shanghai · The Bund' },
+  { src: 'assets/gallery/chibi-childhood.webp', altZh: '在湖北赤壁穿黄色上衣的童年照片', altEn: 'A childhood photo in a yellow shirt in Chibi, Hubei', captionZh: '湖北 · 赤壁', captionEn: 'Chibi · Hubei' },
+  { src: 'assets/gallery/bloxham.webp', altZh: '在英国牛津郡 Bloxham 的照片', altEn: 'In Bloxham, Oxfordshire, United Kingdom', captionZh: '英国 · Oxfordshire · Bloxham', captionEn: 'Bloxham · Oxfordshire · United Kingdom', date: '2018-08-26' },
+  { src: 'assets/gallery/shenzhen-middle-school.webp', altZh: '在深圳中学泥岗校区红砖建筑前的照片', altEn: 'By the red-brick buildings at Shenzhen Middle School, Nigang Campus', captionZh: '深圳 · 深圳中学泥岗校区', captionEn: 'Shenzhen Middle School · Nigang Campus', date: '2024-07-10' },
+  { src: 'assets/gallery/seaside.webp', altZh: '在三亚湾海边的照片', altEn: 'By the sea at Sanya Bay', captionZh: '三亚湾', captionEn: 'Sanya Bay', date: '2026-02-01' },
+  { src: 'assets/gallery/life-01.webp', altZh: '在深圳福田香格里拉的照片', altEn: 'At Futian Shangri-La, Shenzhen', captionZh: '深圳 · 福田香格里拉', captionEn: 'Shenzhen · Futian Shangri-La', date: '2026-04-09' },
+  { src: 'assets/gallery/life-02.webp', altZh: '在哈尔滨工业大学深圳实验学校的合影', altEn: 'A group photo at Harbin Institute of Technology Shenzhen Experimental School', captionZh: '深圳 · 哈尔滨工业大学深圳实验学校', captionEn: 'Shenzhen · HIT Shenzhen Experimental School', date: '2026-04-15' },
+  { type: 'video', src: 'assets/gallery/life-video.mp4', poster: 'assets/gallery/life-video-poster.webp', altZh: '在香港中港城拍摄的生活视频', altEn: 'A personal video filmed at China Hong Kong City', captionZh: '香港 · 中港城', captionEn: 'Hong Kong · China Hong Kong City', date: '2026-10-01' }
 ];
 // Photography works are separate from the personal carousel. Add real works here.
 const photographyWorks = [];
@@ -28,12 +28,12 @@ const translations = {
     viewProjects: '看看我的项目', artLabel: '由绿色圆形、轨道、字母 FZ 和数字 24 组成的抽象个人标识',
     explore: '向下探索', aboutTitle: '关于我',
     aboutIndex: '01 / 关于', projectsIndex: '02 / 项目', essaysSectionIndex: '03 / 随笔', photographyIndex: '04 / 摄影', contactIndex: '05 / 联系',
-    bioIntro: '我是周方璟，在哈工大（深圳）读计算机，现在大二。',
-    bioSite: '这里分享我做的项目，也写一些随笔。',
-    bioStudy: '最近在学：数字逻辑设计、机器学习（ML）、离散数学、概率论、大学物理等。',
-    bioFootball: '支持巴塞罗那和深圳新鹏城，也喜欢去现场看球。自己在哈工大（深圳）校队踢前腰和左边锋。',
-    bioMusic: '喜欢唱歌，听得最多的是欧美流行。常听 Taylor Swift、Ed Sheeran、The Weeknd，也听 Ariana Grande 和 Sabrina Carpenter。去现场看过陶喆和单依纯的演唱会。',
-    bioPotter: '喜欢《哈利·波特》，来自斯莱特林。',
+    bioIntro: '我是周方璟，哈工大（深圳）计算机科学与技术专业大二学生。',
+    bioSite: '这里有我的项目、照片和随笔。',
+    bioStudy: '最近在学数字逻辑设计、机器学习、离散数学、概率论和大学物理。',
+    bioFootball: '我是巴塞罗那和深圳新鹏城的球迷，喜欢去现场看比赛。在哈工大（深圳）校队踢前腰和左边锋。',
+    bioMusic: '喜欢唱歌，平时主要听欧美流行，常听 Taylor Swift、Ed Sheeran、The Weeknd、Ariana Grande 和 Sabrina Carpenter。看过陶喆和单依纯的现场演唱会。',
+    bioPotter: '《哈利·波特》迷，斯莱特林学生。',
     educationTitle: '教育经历', schoolShenzhen: '深圳中学', educationUniversityDates: '2025.9–2029.6（预计）',
     updating: '持续更新中', projectsTitle: '一些正在做的事', allRepos: '全部仓库',
     notesVisual: '学习 / 资料整理', notesCover: '课程讲义', notesArtwork: '哈工深 · 自建讲义库',
@@ -47,9 +47,9 @@ const translations = {
     followMe: '关注我', socialLabel: '社交媒体', rednote: '小红书', pending: '待补充',
     pendingRednote: '小红书链接待补充', linkedinLabel: '在 LinkedIn 上关注我',
     zhihuLabel: '在知乎上关注我', rednoteLabel: '在小红书上关注我', githubLabel: '在 GitHub 上关注我', sponsorTitle: '支持我的学习与创作',
-    sponsorDescription: '随心支持', sponsorPending: '赞助二维码待补充',
+    sponsorDescription: '微信扫一扫', sponsorImageAlt: '微信赞赏二维码',
     officialAccountLabel: '公众号', lastUpdatedLabel: '最后更新：', resumeLabel: '简历 PDF',
-    galleryLabel: '个人相册', previousPhoto: '上一项', nextPhoto: '下一项', photoNumber: '查看第 {n} 项', galleryLogoCaption: 'fz · 24',
+    galleryLabel: '个人相册', previousPhoto: '上一项', nextPhoto: '下一项', photoNumber: '查看第 {n} 项',
     photographyTitle: '摄影集', photographyEmpty: '作品待更新', photographyHint: '这里将收录我喜欢的摄影作品。',
     footerNote: '慢慢积累，常常更新。', backTop: '回到顶部',
     themeDark: '切换到深色模式', themeLight: '切换到浅色模式'
@@ -65,7 +65,7 @@ const translations = {
     explore: 'Scroll to explore', aboutTitle: 'About me',
     aboutIndex: '01 / ABOUT', projectsIndex: '02 / SELECTED PROJECTS', essaysSectionIndex: '03 / ESSAYS', photographyIndex: '04 / PHOTOGRAPHY', contactIndex: '05 / SAY HELLO',
     bioIntro: "I'm Felixzhou, a second-year computer science student at HIT Shenzhen.",
-    bioSite: "I share my projects here and write the occasional essay.",
+    bioSite: "This is where I share my projects, photos, and essays.",
     bioStudy: 'Currently studying: Digital Logic Design, Machine Learning (ML), Discrete Mathematics, Probability Theory, University Physics, and more.',
     bioFootball: 'I support FC Barcelona and Shenzhen Peng City, and enjoy watching matches in person. I play as an attacking midfielder and left winger for the HIT Shenzhen university team.',
     bioMusic: 'I enjoy singing and mostly listen to Western pop: Taylor Swift, Ed Sheeran, The Weeknd, Ariana Grande, and Sabrina Carpenter. I have also seen David Tao and Shan Yichun live in concert.',
@@ -83,9 +83,9 @@ const translations = {
     followMe: 'Follow me', socialLabel: 'Social media', rednote: 'Xiaohongshu', pending: 'Coming soon',
     pendingRednote: 'Xiaohongshu link coming soon', linkedinLabel: 'Follow me on LinkedIn',
     zhihuLabel: 'Follow me on Zhihu', rednoteLabel: 'Follow me on Xiaohongshu', githubLabel: 'Follow me on GitHub', sponsorTitle: 'Support my learning and creative work',
-    sponsorDescription: 'Sponsor', sponsorPending: 'Sponsor QR code coming soon',
+    sponsorDescription: 'Scan with WeChat', sponsorImageAlt: 'WeChat support QR code',
     officialAccountLabel: 'Official account', lastUpdatedLabel: 'Last updated:', resumeLabel: 'Résumé PDF',
-    galleryLabel: 'Personal gallery', previousPhoto: 'Previous item', nextPhoto: 'Next item', photoNumber: 'Show item {n}', galleryLogoCaption: 'fz · 24',
+    galleryLabel: 'Personal gallery', previousPhoto: 'Previous item', nextPhoto: 'Next item', photoNumber: 'Show item {n}',
     photographyTitle: 'Photography', photographyEmpty: 'No works published yet', photographyHint: 'A selection of my favorite photographs will appear here.',
     footerNote: 'A little at a time, with more to come.', backTop: 'Back to top',
     themeDark: 'Switch to dark mode', themeLight: 'Switch to light mode'
@@ -121,6 +121,7 @@ function setLanguage(next) {
     element.setAttribute('aria-label', label);
     if (element.classList.contains('social-icon')) element.title = label;
   });
+  document.querySelector('#sponsor-image').alt = copy.sponsorImageAlt;
   document.title = copy.title;
   document.querySelector('meta[name="description"]').content = copy.description;
   languageToggle.textContent = language === 'zh' ? 'English' : '中文';
@@ -160,10 +161,12 @@ function updateGalleryLanguage() {
     else media.alt = description;
   });
   const activePhoto = personalPhotos[galleryState.index - 1];
-  document.querySelector('.gallery-caption').textContent = activePhoto
+  const caption = document.querySelector('.gallery-caption');
+  caption.hidden = !activePhoto;
+  caption.textContent = activePhoto
     ? (language === 'zh' ? activePhoto.captionZh : activePhoto.captionEn)
-    : copy.galleryLogoCaption;
-  if (activePhoto?.date) document.querySelector('.gallery-caption').textContent += ' · ' + activePhoto.date.replaceAll('-', '.');
+    : '';
+  if (activePhoto?.date) caption.textContent += ' · ' + activePhoto.date.replaceAll('-', '.');
   galleryState.dots.forEach((dot, index) => {
     dot.setAttribute('aria-label', copy.photoNumber.replace('{n}', index + 1));
   });
@@ -202,6 +205,12 @@ function showGallerySlide(index) {
   });
   galleryState.dots.forEach((dot, dotIndex) => {
     dot.setAttribute('aria-current', String(dotIndex === galleryState.index));
+  });
+  // Warm up adjacent photos so the next swipe rarely needs to wait.
+  [-1, 0, 1].forEach(offset => {
+    const nearby = (galleryState.index + offset + gallerySlides.length) % gallerySlides.length;
+    const image = gallerySlides[nearby].querySelector('img');
+    if (image) image.loading = 'eager';
   });
   updateGalleryLanguage();
 }

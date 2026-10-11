@@ -172,3 +172,8 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 
 @media(min-width:721px){.hero-gallery{aspect-ratio:.82}}
 .hero-art .art-bottom{font-size:12px}
+
+.gallery-caption[hidden]{display:none}
+.sponsor-code{position:relative;width:300px;max-width:100%;flex-shrink:0;aspect-ratio:512/546;overflow:hidden;border-radius:8px;background:#fff}
+.sponsor-code img{position:absolute;display:block;width:161.71875%;max-width:none;height:auto;left:-30.859375%;top:-38.827839%}
+@media(max-width:720px){.sponsor{align-items:flex-start;flex-direction:column;gap:20px}.sponsor-code{align-self:center}}
