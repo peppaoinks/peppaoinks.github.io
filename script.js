@@ -51,7 +51,7 @@ const translations = {
     officialAccountLabel: '公众号', lastUpdatedLabel: '最后更新：', resumeLabel: '简历 PDF',
     galleryLabel: '个人相册', previousPhoto: '上一项', nextPhoto: '下一项', photoNumber: '查看第 {n} 项',
     photographyTitle: '摄影集', photographyEmpty: '作品待更新', photographyHint: '这里将收录我喜欢的摄影作品。',
-    footerNote: '慢慢积累，常常更新。', backTop: '回到顶部',
+    backTop: '回到顶部',
     themeDark: '切换到深色模式', themeLight: '切换到浅色模式'
   },
   en: {
@@ -87,7 +87,7 @@ const translations = {
     officialAccountLabel: 'Official account', lastUpdatedLabel: 'Last updated:', resumeLabel: 'Résumé PDF',
     galleryLabel: 'Personal gallery', previousPhoto: 'Previous item', nextPhoto: 'Next item', photoNumber: 'Show item {n}',
     photographyTitle: 'Photography', photographyEmpty: 'No works published yet', photographyHint: 'A selection of my favorite photographs will appear here.',
-    footerNote: 'A little at a time, with more to come.', backTop: 'Back to top',
+    backTop: 'Back to top',
     themeDark: 'Switch to dark mode', themeLight: 'Switch to light mode'
   }
 };
