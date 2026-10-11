@@ -1,3 +1,19 @@
+// Life photos are ordered from childhood to the present, followed by the video.
+const personalPhotos = [
+  { src: 'assets/gallery/childhood-flowers.jpg', altZh: '在深圳戴着彩色花环的童年照片', altEn: 'A childhood photo wearing a colorful garland in Shenzhen', captionZh: '深圳 · 童年', captionEn: 'Shenzhen · Childhood', date: '2010-07-17' },
+  { src: 'assets/gallery/childhood-panda.jpg', altZh: '在上海外滩戴着熊猫帽的童年照片', altEn: 'A childhood photo wearing a panda hat at the Bund in Shanghai', captionZh: '上海 · 外滩', captionEn: 'Shanghai · The Bund' },
+  { src: 'assets/gallery/chibi-childhood.jpg', altZh: '在湖北赤壁穿黄色上衣的童年照片', altEn: 'A childhood photo in a yellow shirt in Chibi, Hubei', captionZh: '湖北 · 赤壁', captionEn: 'Chibi · Hubei' },
+  { src: 'assets/gallery/bloxham.jpg', altZh: '在英国牛津郡 Bloxham 的照片', altEn: 'In Bloxham, Oxfordshire, United Kingdom', captionZh: '英国 · Oxfordshire · Bloxham', captionEn: 'Bloxham · Oxfordshire · United Kingdom', date: '2018-08-26' },
+  { src: 'assets/gallery/shenzhen-middle-school.jpg', altZh: '在深圳中学泥岗校区红砖建筑前的照片', altEn: 'By the red-brick buildings at Shenzhen Middle School, Nigang Campus', captionZh: '深圳 · 深圳中学泥岗校区', captionEn: 'Shenzhen Middle School · Nigang Campus', date: '2024-07-10' },
+  { src: 'assets/gallery/seaside.jpg', altZh: '三亚湾旅行时的海边照片', altEn: 'By the sea during a trip to Sanya Bay', captionZh: '三亚湾 · 旅行', captionEn: 'Sanya Bay · Travel', date: '2026-02-01' },
+  { src: 'assets/gallery/life-01.jpg', altZh: '在深圳福田香格里拉参加 QS 教育峰会', altEn: 'At the QS education summit at Futian Shangri-La, Shenzhen', captionZh: '深圳 · 福田香格里拉 · QS 教育峰会', captionEn: 'Futian Shangri-La, Shenzhen · QS Education Summit', date: '2026-04-09' },
+  { src: 'assets/gallery/life-02.jpg', altZh: '穿着巴萨球衣，在哈尔滨工业大学深圳实验学校担任英语老师时与学生合影', altEn: 'Wearing a Barcelona shirt with students while teaching English at Harbin Institute of Technology Shenzhen Experimental School', captionZh: '深圳 · 哈尔滨工业大学深圳实验学校 · 英语教学', captionEn: 'Shenzhen · HIT Shenzhen Experimental School · Teaching English', date: '2026-04-15' },
+  { type: 'video', src: 'assets/gallery/life-video.mp4', poster: 'assets/gallery/life-video-poster.jpg', altZh: '在香港中港城拍摄的生活视频', altEn: 'A personal video filmed at China Hong Kong City', captionZh: '香港 · 中港城', captionEn: 'Hong Kong · China Hong Kong City', date: '2026-10-01' }
+];
+// Photography works are separate from the personal carousel. Add real works here.
+const photographyWorks = [];
+const resumePdf = "";
+let galleryState = null;
 const root = document.documentElement;
 const themeToggle = document.querySelector('.theme-toggle');
 const languageToggle = document.querySelector('.language-toggle');
@@ -6,17 +22,18 @@ const translations = {
     title: '周方璟 · 个人主页', name: '周方璟',
     description: '周方璟，哈尔滨工业大学（深圳）计算机科学与技术专业大二学生。个人项目、随笔与日常。',
     skip: '跳到主要内容', homeLabel: '周方璟 首页', navLabel: '主导航',
-    navAbout: '关于', navProjects: '项目', navEssays: '随笔', navContact: '联系',
+    navAbout: '关于', navProjects: '项目', navEssays: '随笔', navPhotography: '摄影', navContact: '联系',
     hello: '你好，我是', university: '哈尔滨工业大学（深圳）', degree: '计算机科学与技术 · 大二',
-    eyebrow: '我的个人空间',
     artLineOne: 'the best people', artLineTwo: 'in life are free.',
-    viewProjects: '看看我的项目', artLabel: '由橙色圆形、轨道、字母 FZ 和数字 24 组成的抽象个人标识',
+    viewProjects: '看看我的项目', artLabel: '由绿色圆形、轨道、字母 FZ 和数字 24 组成的抽象个人标识',
     explore: '向下探索', aboutTitle: '关于我',
-    aboutIndex: '01 / 关于', projectsIndex: '02 / 项目', essaysSectionIndex: '03 / 随笔', contactIndex: '04 / 联系',
-    bioIntro: '你好，我是周方璟，在哈工大（深圳）读计算机，现在大二。',
-    bioSite: '做过的项目和想留下的文字，我会慢慢整理到这里。',
+    aboutIndex: '01 / 关于', projectsIndex: '02 / 项目', essaysSectionIndex: '03 / 随笔', photographyIndex: '04 / 摄影', contactIndex: '05 / 联系',
+    bioIntro: '我是周方璟，在哈工大（深圳）读计算机，现在大二。',
+    bioSite: '这里分享我做的项目，也写一些随笔。',
     bioStudy: '最近在学：数字逻辑设计、机器学习（ML）、离散数学、概率论、大学物理等。',
-    bioHobbies: '课余喜欢足球、唱歌和听歌。常听 Taylor Swift、Ed Sheeran 和 The Weeknd。',
+    bioFootball: '支持巴塞罗那和深圳新鹏城，也喜欢去现场看球。自己在哈工大（深圳）校队踢前腰和左边锋。',
+    bioMusic: '喜欢唱歌，听得最多的是欧美流行。常听 Taylor Swift、Ed Sheeran、The Weeknd，也听 Ariana Grande 和 Sabrina Carpenter。去现场看过陶喆和单依纯的演唱会。',
+    bioPotter: '喜欢《哈利·波特》，来自斯莱特林。',
     educationTitle: '教育经历', schoolShenzhen: '深圳中学', educationUniversityDates: '2025.9–2029.6（预计）',
     updating: '持续更新中', projectsTitle: '一些正在做的事', allRepos: '全部仓库',
     notesVisual: '学习 / 资料整理', notesCover: '课程讲义', notesArtwork: '哈工深 · 自建讲义库',
@@ -27,10 +44,13 @@ const translations = {
     essaysIntro: '关于生活、音乐，以及偶尔想留下的感受。',
     essaysEmpty: '第一篇，慢慢写。', essaysHint: '还没有公开的随笔，写好了就放在这里。',
     emailLabel: '邮箱', wechatLabel: '微信', contactDetails: '联系方式', contactEyebrow: '很高兴认识你。', contactTitle: '保持联系', findGithub: '在 GitHub 上找到我',
-    followMe: '关注我', socialLabel: '社交媒体', rednote: '小红书', bilibili: '哔哩哔哩', pending: '待补充',
-    pendingRednote: '小红书链接待补充', pendingBilibili: 'bilibili 链接待补充', linkedinLabel: '在 LinkedIn 上关注我',
+    followMe: '关注我', socialLabel: '社交媒体', rednote: '小红书', pending: '待补充',
+    pendingRednote: '小红书链接待补充', linkedinLabel: '在 LinkedIn 上关注我',
     zhihuLabel: '在知乎上关注我', rednoteLabel: '在小红书上关注我', githubLabel: '在 GitHub 上关注我', sponsorTitle: '支持我的学习与创作',
     sponsorDescription: '随心支持', sponsorPending: '赞助二维码待补充',
+    officialAccountLabel: '公众号', lastUpdatedLabel: '最后更新：', resumeLabel: '简历 PDF',
+    galleryLabel: '个人相册', previousPhoto: '上一项', nextPhoto: '下一项', photoNumber: '查看第 {n} 项', galleryLogoCaption: 'fz · 24',
+    photographyTitle: '摄影集', photographyEmpty: '作品待更新', photographyHint: '这里将收录我喜欢的摄影作品。',
     footerNote: '慢慢积累，常常更新。', backTop: '回到顶部',
     themeDark: '切换到深色模式', themeLight: '切换到浅色模式'
   },
@@ -38,17 +58,18 @@ const translations = {
     title: 'Felixzhou · Personal Website', name: 'Felixzhou',
     description: 'Felixzhou, a second-year Computer Science and Technology student at Harbin Institute of Technology, Shenzhen. Projects, essays, and everyday life.',
     skip: 'Skip to content', homeLabel: 'Felixzhou home', navLabel: 'Main navigation',
-    navAbout: 'About', navProjects: 'Projects', navEssays: 'Essays', navContact: 'Contact',
+    navAbout: 'About', navProjects: 'Projects', navEssays: 'Essays', navPhotography: 'Photography', navContact: 'Contact',
     hello: "Hi, I'm", university: 'Harbin Institute of Technology, Shenzhen', degree: 'Computer Science and Technology · Year 2',
-    eyebrow: 'A LITTLE SPACE ON THE INTERNET',
     artLineOne: 'the best people', artLineTwo: 'in life are free.',
-    viewProjects: 'Explore my projects', artLabel: 'An abstract FZ monogram with the number 24, an orange circle, and orbital lines',
+    viewProjects: 'Explore my projects', artLabel: 'An abstract FZ monogram with the number 24, a green circle, and orbital lines',
     explore: 'Scroll to explore', aboutTitle: 'About me',
-    aboutIndex: '01 / ABOUT', projectsIndex: '02 / SELECTED PROJECTS', essaysSectionIndex: '03 / ESSAYS', contactIndex: '04 / SAY HELLO',
-    bioIntro: "Hi, I'm Felixzhou. I'm in my second year studying computer science at HIT Shenzhen.",
-    bioSite: "I'll use this space to share what I make and write down the things I want to remember.",
+    aboutIndex: '01 / ABOUT', projectsIndex: '02 / SELECTED PROJECTS', essaysSectionIndex: '03 / ESSAYS', photographyIndex: '04 / PHOTOGRAPHY', contactIndex: '05 / SAY HELLO',
+    bioIntro: "I'm Felixzhou, a second-year computer science student at HIT Shenzhen.",
+    bioSite: "I share my projects here and write the occasional essay.",
     bioStudy: 'Currently studying: Digital Logic Design, Machine Learning (ML), Discrete Mathematics, Probability Theory, University Physics, and more.',
-    bioHobbies: 'Outside of class, I enjoy football, singing, and listening to music. Taylor Swift, Ed Sheeran, and The Weeknd are often on my playlist.',
+    bioFootball: 'I support FC Barcelona and Shenzhen Peng City, and enjoy watching matches in person. I play as an attacking midfielder and left winger for the HIT Shenzhen university team.',
+    bioMusic: 'I enjoy singing and mostly listen to Western pop: Taylor Swift, Ed Sheeran, The Weeknd, Ariana Grande, and Sabrina Carpenter. I have also seen David Tao and Shan Yichun live in concert.',
+    bioPotter: "I'm also a Harry Potter fan and a Slytherin.",
     educationTitle: 'Education', schoolShenzhen: 'Shenzhen Middle School', educationUniversityDates: '2025.9–2029.6 (expected)',
     updating: 'A work in progress', projectsTitle: "Things I'm working on", allRepos: 'All repositories',
     notesVisual: 'LEARNING / DOCUMENTATION', notesCover: 'LECTURE NOTES', notesArtwork: 'HITSZ · Lecture notes',
@@ -59,10 +80,13 @@ const translations = {
     essaysIntro: 'Thoughts on life, music, and moments I want to remember.',
     essaysEmpty: 'Taking my time with the first one.', essaysHint: 'No published essays yet. They will appear here when ready.',
     emailLabel: 'Email', wechatLabel: 'WeChat', contactDetails: 'Contact details', contactEyebrow: 'Nice to meet you.', contactTitle: 'Keep in touch', findGithub: 'Find me on GitHub',
-    followMe: 'Follow me', socialLabel: 'Social media', rednote: 'Xiaohongshu', bilibili: 'bilibili', pending: 'Coming soon',
-    pendingRednote: 'Xiaohongshu link coming soon', pendingBilibili: 'bilibili link coming soon', linkedinLabel: 'Follow me on LinkedIn',
+    followMe: 'Follow me', socialLabel: 'Social media', rednote: 'Xiaohongshu', pending: 'Coming soon',
+    pendingRednote: 'Xiaohongshu link coming soon', linkedinLabel: 'Follow me on LinkedIn',
     zhihuLabel: 'Follow me on Zhihu', rednoteLabel: 'Follow me on Xiaohongshu', githubLabel: 'Follow me on GitHub', sponsorTitle: 'Support my learning and creative work',
     sponsorDescription: 'Sponsor', sponsorPending: 'Sponsor QR code coming soon',
+    officialAccountLabel: 'Official account', lastUpdatedLabel: 'Last updated:', resumeLabel: 'Résumé PDF',
+    galleryLabel: 'Personal gallery', previousPhoto: 'Previous item', nextPhoto: 'Next item', photoNumber: 'Show item {n}', galleryLogoCaption: 'fz · 24',
+    photographyTitle: 'Photography', photographyEmpty: 'No works published yet', photographyHint: 'A selection of my favorite photographs will appear here.',
     footerNote: 'A little at a time, with more to come.', backTop: 'Back to top',
     themeDark: 'Switch to dark mode', themeLight: 'Switch to light mode'
   }
@@ -82,7 +106,7 @@ function updateThemeLabel() {
 }
 function setTheme(theme) {
   root.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#20231e' : '#f5f4ee';
+  document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#0c1b14' : '#f1f5ee';
   updateThemeLabel();
 }
 function setLanguage(next) {
@@ -103,6 +127,7 @@ function setLanguage(next) {
   languageToggle.lang = language === 'zh' ? 'en' : 'zh-CN';
   languageToggle.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
   updateThemeLabel();
+  updateGalleryLanguage();
 }
 const savedTheme = readPreference('fz-theme');
 const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -119,3 +144,124 @@ languageToggle.addEventListener('click', () => {
   savePreference('fz-language', next);
 });
 document.getElementById('year').textContent = new Date().getFullYear();
+
+if (resumePdf) {
+  const resumeLink = document.getElementById('resume-link');
+  resumeLink.href = resumePdf;
+  resumeLink.hidden = false;
+}
+
+function updateGalleryLanguage() {
+  if (!galleryState) return;
+  const copy = translations[language];
+  galleryState.photos.forEach(({ media, photo }) => {
+    const description = language === 'zh' ? photo.altZh : photo.altEn;
+    if (photo.type === 'video') media.setAttribute('aria-label', description);
+    else media.alt = description;
+  });
+  const activePhoto = personalPhotos[galleryState.index - 1];
+  document.querySelector('.gallery-caption').textContent = activePhoto
+    ? (language === 'zh' ? activePhoto.captionZh : activePhoto.captionEn)
+    : copy.galleryLogoCaption;
+  if (activePhoto?.date) document.querySelector('.gallery-caption').textContent += ' · ' + activePhoto.date.replaceAll('-', '.');
+  galleryState.dots.forEach((dot, index) => {
+    dot.setAttribute('aria-label', copy.photoNumber.replace('{n}', index + 1));
+  });
+}
+
+const gallery = document.querySelector('.hero-gallery');
+const galleryControls = gallery.querySelector('.gallery-controls');
+galleryState = { photos: [], dots: [], index: 0 };
+personalPhotos.forEach(photo => {
+  const slide = document.createElement('div');
+  slide.className = 'gallery-slide photo-slide';
+  slide.hidden = true;
+  const media = document.createElement(photo.type === 'video' ? 'video' : 'img');
+  media.src = photo.src;
+  media.style.objectPosition = photo.position || 'center';
+  if (photo.type === 'video') {
+    media.controls = true;
+    media.playsInline = true;
+    media.preload = 'none';
+    media.poster = photo.poster;
+    media.textContent = 'Your browser does not support embedded video.';
+  } else {
+    media.loading = 'lazy';
+    media.decoding = 'async';
+  }
+  slide.append(media);
+  gallery.insertBefore(slide, galleryControls);
+  galleryState.photos.push({ media, photo });
+});
+const gallerySlides = Array.from(gallery.querySelectorAll('.gallery-slide'));
+function showGallerySlide(index) {
+  galleryState.index = (index + gallerySlides.length) % gallerySlides.length;
+  gallerySlides.forEach((slide, slideIndex) => {
+    slide.hidden = slideIndex !== galleryState.index;
+    if (slide.hidden) slide.querySelector('video')?.pause();
+  });
+  galleryState.dots.forEach((dot, dotIndex) => {
+    dot.setAttribute('aria-current', String(dotIndex === galleryState.index));
+  });
+  updateGalleryLanguage();
+}
+if (gallerySlides.length > 1) {
+  gallery.classList.add('has-photos');
+  galleryControls.hidden = false;
+  gallerySlides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.addEventListener('click', () => showGallerySlide(index));
+    gallery.querySelector('.gallery-dots').append(dot);
+    galleryState.dots.push(dot);
+  });
+  gallery.querySelector('.gallery-prev').addEventListener('click', () => showGallerySlide(galleryState.index - 1));
+  gallery.querySelector('.gallery-next').addEventListener('click', () => showGallerySlide(galleryState.index + 1));
+  gallery.addEventListener('keydown', event => {
+    if (event.target.closest('video')) return;
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    showGallerySlide(galleryState.index + (event.key === 'ArrowRight' ? 1 : -1));
+  });
+  let touchStart;
+  gallery.addEventListener('touchstart', event => {
+    if (event.target.closest('video')) { touchStart = null; return; }
+    if (event.touches.length !== 1) { touchStart = null; return; }
+    touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+  }, { passive: true });
+  gallery.addEventListener('touchend', event => {
+    if (!touchStart || !event.changedTouches.length) return;
+    const deltaX = event.changedTouches[0].clientX - touchStart.x;
+    const deltaY = event.changedTouches[0].clientY - touchStart.y;
+    if (Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      showGallerySlide(galleryState.index + (deltaX < 0 ? 1 : -1));
+    }
+    touchStart = null;
+  }, { passive: true });
+  showGallerySlide(0);
+} else {
+  gallery.removeAttribute('tabindex');
+}
+updateGalleryLanguage();
+
+const photographyGrid = document.querySelector('.photography-grid');
+photographyWorks.forEach(work => {
+  const figure = document.createElement('figure');
+  const image = document.createElement('img');
+  image.src = work.src;
+  image.loading = 'lazy';
+  image.decoding = 'async';
+  const caption = document.createElement('figcaption');
+  const updateCopy = () => {
+    image.alt = language === 'zh' ? work.altZh : work.altEn;
+    caption.textContent = language === 'zh' ? work.captionZh : work.captionEn;
+  };
+  updateCopy();
+  languageToggle.addEventListener('click', updateCopy);
+  figure.append(image, caption);
+  photographyGrid.append(figure);
+});
+if (photographyWorks.length) {
+  photographyGrid.hidden = false;
+  document.querySelector('.photography-empty').hidden = true;
+}

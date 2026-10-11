@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f4ee">
+  <meta name="theme-color" content="#f1f5ee">
   <meta name="description" content="周方璟，哈尔滨工业大学（深圳）计算机科学与技术专业大二学生。个人项目、随笔与日常。">
   <title>周方璟 · 个人主页</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=green">
+  <link rel="stylesheet" href="style.css?v=20261011-gallery2">
+  <script src="script.js?v=20261011-gallery2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
   <header class="site-header wrap">
     <a class="brand" href="#home" aria-label="周方璟 首页" data-i18n-label="homeLabel">fz<span>®</span></a>
     <nav aria-label="主导航" data-i18n-label="navLabel">
-      <a href="#about" data-i18n="navAbout">关于</a><a href="#projects" data-i18n="navProjects">项目</a><a href="#essays" data-i18n="navEssays">随笔</a><a href="#contact"><span data-i18n="navContact">联系</span> <span aria-hidden="true">↗</span></a>
+      <a href="#about" data-i18n="navAbout">关于</a><a href="#projects" data-i18n="navProjects">项目</a><a href="#essays" data-i18n="navEssays">随笔</a><a href="#photography" data-i18n="navPhotography">摄影</a><a href="#contact"><span data-i18n="navContact">联系</span> <span aria-hidden="true">↗</span></a>
     </nav>
     <div class="header-actions"><button class="language-toggle" type="button" aria-label="Switch to English" lang="en">English</button><button class="theme-toggle" type="button" aria-label="切换到深色模式" title="切换主题"><span aria-hidden="true">◐</span></button></div>
   </header>
@@ -23,13 +23,11 @@
   <main id="main">
     <section class="hero wrap" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span><span data-i18n="eyebrow">我的个人空间</span></p>
         <h1 id="hero-title" class="profile-name"><span data-i18n="name">周方璟</span><span class="orange" aria-hidden="true">.</span></h1>
         <p class="hero-description"><span data-i18n="university">哈尔滨工业大学（深圳）</span><br><span data-i18n="degree">计算机科学与技术 · 大二</span></p>
         <div class="profile-socials" aria-label="社交媒体" data-i18n-label="socialLabel">
           <span class="follow-label" data-i18n="followMe">关注我</span>
           <a class="social-icon" href="https://www.xiaohongshu.com/user/profile/63aa5acc00000000260118b8" target="_blank" rel="noopener noreferrer" aria-label="在小红书上关注我" data-i18n-label="rednoteLabel" title="在小红书上关注我"><span class="brand-icon icon-xiaohongshu" aria-hidden="true"></span></a>
-          <span class="social-icon social-unavailable" role="img" aria-label="bilibili 链接待补充" data-i18n-label="pendingBilibili" title="bilibili 链接待补充"><span class="brand-icon icon-bilibili" aria-hidden="true"></span></span>
           <a class="social-icon" href="https://www.linkedin.com/in/%E6%96%B9%E7%92%9F-%E5%91%A8-8bba3a41b/" target="_blank" rel="noopener noreferrer" aria-label="在 LinkedIn 上关注我" data-i18n-label="linkedinLabel" title="在 LinkedIn 上关注我"><span class="brand-icon icon-linkedin" aria-hidden="true"></span></a>
           <a class="social-icon" href="https://www.zhihu.com/people/oranger-6-48" target="_blank" rel="noopener noreferrer" aria-label="在知乎上关注我" data-i18n-label="zhihuLabel" title="在知乎上关注我"><span class="brand-icon icon-zhihu" aria-hidden="true"></span></a>
           <a class="social-icon" href="https://github.com/peppaoinks" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 上关注我" data-i18n-label="githubLabel" title="在 GitHub 上关注我"><span class="brand-icon icon-github" aria-hidden="true"></span></a>
@@ -40,14 +38,20 @@
           <a href="mailto:mrzhoufj@gmail.com">mrzhoufj@gmail.com <span aria-hidden="true">↗</span></a>
           <span class="contact-label" data-i18n="wechatLabel">微信</span>
           <span class="wechat-id">mrzhoufj</span>
+          <span class="contact-label" data-i18n="officialAccountLabel">公众号</span>
+          <span class="wechat-id">NeonDynamics</span>
         </div>
-        <a class="button" href="#projects"><span data-i18n="viewProjects">看看我的项目</span> <span aria-hidden="true">↗</span></a>
+        <div class="hero-actions"><a class="button" href="#projects"><span data-i18n="viewProjects">看看我的项目</span> <span aria-hidden="true">↗</span></a><a class="button button-secondary" id="resume-link" target="_blank" rel="noopener noreferrer" hidden><span data-i18n="resumeLabel">简历 PDF</span><span aria-hidden="true">↗</span></a></div>
       </div>
-      <div class="hero-art" role="img" aria-label="由橙色圆形、轨道、字母 FZ 和数字 24 组成的抽象个人标识" data-i18n-label="artLabel">
+      <div class="hero-gallery" role="region" aria-label="个人相册" data-i18n-label="galleryLabel" tabindex="0">
+      <div class="hero-art gallery-slide" role="img" aria-label="由绿色圆形、轨道、字母 FZ 和数字 24 组成的抽象个人标识" data-i18n-label="artLabel">
         <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
         <div class="art-disc"></div><span class="art-letter">fz</span><span class="art-number">24</span>
         <span class="art-spark" aria-hidden="true">✳</span>
         <div class="art-bottom"><span><span data-i18n="artLineOne">the best people</span><br><span data-i18n="artLineTwo">in life are free.</span></span><span class="art-arrow" aria-hidden="true">↗</span></div>
+      </div>
+      <p class="gallery-caption" aria-live="polite" aria-atomic="true">fz · 24</p>
+      <div class="gallery-controls" hidden><button class="gallery-prev" type="button" aria-label="上一项" data-i18n-label="previousPhoto">←</button><div class="gallery-dots"></div><button class="gallery-next" type="button" aria-label="下一项" data-i18n-label="nextPhoto">→</button></div>
       </div>
       <div class="hero-foot"><a href="#about"><span data-i18n="explore">向下探索</span> <span aria-hidden="true">↓</span></a></div>
     </section>
@@ -55,7 +59,7 @@
     <section class="about section wrap" id="about" aria-labelledby="about-title">
       <div class="section-index"><span data-i18n="aboutIndex">01 / 关于</span><span class="small-star" aria-hidden="true">✳</span></div>
       <div class="about-content"><h2 id="about-title"><span data-i18n="aboutTitle">关于我</span><span class="orange">.</span></h2>
-        <div class="about-description"><p data-i18n="bioIntro">你好，我是周方璟，在哈工大（深圳）读计算机，现在大二。</p><p data-i18n="bioSite">做过的项目和想留下的文字，我会慢慢整理到这里。</p><p class="bio-detail" data-i18n="bioStudy">最近在学：数字逻辑设计、机器学习（ML）、离散数学、概率论、大学物理等。</p><p class="bio-detail" data-i18n="bioHobbies">课余喜欢足球、唱歌和听歌。常听 Taylor Swift、Ed Sheeran 和 The Weeknd。</p><a class="bio-github" href="https://github.com/peppaoinks" target="_blank" rel="noopener noreferrer">@peppaoinks ↗</a></div>
+        <div class="about-description"><p data-i18n="bioIntro">我是周方璟，在哈工大（深圳）读计算机，现在大二。</p><p data-i18n="bioSite">这里分享我做的项目，也写一些随笔。</p><p class="bio-detail" data-i18n="bioStudy">最近在学：数字逻辑设计、机器学习（ML）、离散数学、概率论、大学物理等。</p><p class="bio-detail" data-i18n="bioFootball">支持巴塞罗那和深圳新鹏城，也喜欢去现场看球。自己在哈工大（深圳）校队踢前腰和左边锋。</p><p class="bio-detail" data-i18n="bioMusic">喜欢唱歌，听得最多的是欧美流行。常听 Taylor Swift、Ed Sheeran、The Weeknd，也听 Ariana Grande 和 Sabrina Carpenter。去现场看过陶喆和单依纯的演唱会。</p><p class="bio-detail" data-i18n="bioPotter">喜欢《哈利·波特》，来自斯莱特林。</p><a class="bio-github" href="https://github.com/peppaoinks" target="_blank" rel="noopener noreferrer">@peppaoinks ↗</a></div>
       </div>
       <div class="education" aria-labelledby="education-title">
         <h3 id="education-title" data-i18n="educationTitle">教育经历</h3>
@@ -88,12 +92,19 @@
       <div class="essays-empty"><span class="essay-mark" aria-hidden="true">✎</span><div><p data-i18n="essaysEmpty">第一篇，慢慢写。</p><span data-i18n="essaysHint">还没有公开的随笔，写好了就放在这里。</span></div></div>
     </section>
 
+    <section class="photography section wrap" id="photography" aria-labelledby="photography-title">
+      <div class="section-index"><span data-i18n="photographyIndex">04 / 摄影</span><span class="small-star" aria-hidden="true">✳</span></div>
+      <div class="section-heading"><h2 id="photography-title"><span data-i18n="photographyTitle">摄影集</span><span class="orange">.</span></h2></div>
+      <div class="photography-grid" hidden></div>
+      <div class="photography-empty"><span class="photography-mark" aria-hidden="true">◎</span><div><p data-i18n="photographyEmpty">作品待更新</p><span data-i18n="photographyHint">这里将收录我喜欢的摄影作品。</span></div></div>
+    </section>
+
     <section class="contact section wrap" id="contact" aria-labelledby="contact-title">
-      <div class="section-index"><span data-i18n="contactIndex">04 / 联系</span><span class="small-star" aria-hidden="true">✳</span></div>
+      <div class="section-index"><span data-i18n="contactIndex">05 / 联系</span><span class="small-star" aria-hidden="true">✳</span></div>
       <div class="contact-content"><div><p class="eyebrow" data-i18n="contactEyebrow">很高兴认识你。</p><h2 id="contact-title"><span data-i18n="contactTitle">保持联系</span><span class="orange">.</span></h2></div><a class="contact-link" href="#contact-details"><span data-i18n="contactDetails">联系方式</span><span class="contact-arrow" aria-hidden="true">↑</span></a></div>
       <div class="sponsor"><div><p data-i18n="sponsorTitle">支持我的学习与创作</p><span data-i18n="sponsorDescription">随心支持</span></div><span class="sponsor-pending" data-i18n="sponsorPending">赞助二维码待补充</span></div>
     </section>
   </main>
-  <footer class="wrap"><span>© <span id="year">2026</span> <span data-i18n="name">周方璟</span></span><span data-i18n="footerNote">慢慢积累，常常更新。</span><a href="#home"><span data-i18n="backTop">回到顶部</span> ↑</a></footer>
+  <footer class="wrap"><span>© <span id="year">2026</span> <span data-i18n="name">周方璟</span></span><span data-i18n="footerNote">慢慢积累，常常更新。</span><span class="last-updated"><span data-i18n="lastUpdatedLabel">最后更新：</span> <time datetime="2026-10-11">2026.10.11</time></span><a href="#home"><span data-i18n="backTop">回到顶部</span> ↑</a></footer>
 </body>
 </html>
