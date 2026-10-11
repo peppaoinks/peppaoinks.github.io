@@ -177,3 +177,11 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 .sponsor-code{position:relative;width:300px;max-width:100%;flex-shrink:0;aspect-ratio:512/546;overflow:hidden;border-radius:8px;background:#fff}
 .sponsor-code img{position:absolute;display:block;width:161.71875%;max-width:none;height:auto;left:-30.859375%;top:-38.827839%}
 @media(max-width:720px){.sponsor{align-items:flex-start;flex-direction:column;gap:20px}.sponsor-code{align-self:center}}
+
+/* Full-name wordmark, sized relative to its artwork rather than the viewport. */
+.hero-art{container-type:inline-size}
+.hero-art .art-letter{top:42%;left:50%;font-size:20cqw;letter-spacing:-.055em;line-height:1;white-space:nowrap;transform:translate(-50%,-50%) rotate(-11deg)}
+.hero-art .art-number{top:auto;right:23%;bottom:22%;font-size:18cqw;letter-spacing:-.035em}
+.site-header .brand{font-size:30px;letter-spacing:-1.6px}
+.site-header .brand span{font-size:9px;margin-left:4px}
+@media(max-width:720px){.site-header .brand{font-size:27px;letter-spacing:-1.4px}}
