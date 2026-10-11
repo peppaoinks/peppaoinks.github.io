@@ -176,7 +176,10 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 .hero-art .art-bottom{font-size:12px}
 
 .gallery-caption[hidden]{display:none}
-.sponsor-code{width:300px;max-width:100%;flex-shrink:0;padding:14px 14px 18px;border-radius:8px;background:#fff;text-align:center}
+.sponsor-code{--qr-paper:#f5f7ef;--qr-ink:#173124;width:300px;max-width:100%;flex-shrink:0;padding:14px 14px 18px;border:1px solid var(--line);border-radius:8px;background:var(--qr-paper);text-align:center}
+:root[data-theme="dark"] .sponsor-code{--qr-paper:#b7c5b2;--qr-ink:#0c2117;border-color:#66816a}
+.sponsor-code .qr-background{fill:var(--qr-paper)}
+.sponsor-code .qr-modules{fill:var(--qr-ink)}
 .sponsor-code svg{display:block;width:100%;height:auto}
 @media(max-width:720px){.sponsor{align-items:flex-start;flex-direction:column;gap:20px}.sponsor-code{align-self:center}}
 
