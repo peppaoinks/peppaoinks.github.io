@@ -250,7 +250,7 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 .campus-map .leaflet-popup-content strong{display:block;font-size:15px;font-weight:600}
 .campus-map .leaflet-popup-content span{display:block;font-size:12px;color:var(--muted);margin-top:4px}
 .campus-map .leaflet-control-zoom a{background:var(--bg);color:var(--text);border-color:var(--line)}
-.campus-map .leaflet-control-attribution{background:var(--bg);color:var(--muted);font-family:var(--font);font-size:10px}
+.campus-map .campus-map-canvas .leaflet-control-attribution{background:var(--bg);color:var(--muted);font-family:var(--font);font-size:10px}
 .campus-map .leaflet-control-attribution a{color:var(--text)}
 @media(max-width:720px){
   .campus-map-toolbar{flex-wrap:wrap;gap:12px;padding:14px}

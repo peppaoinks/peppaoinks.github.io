@@ -5,8 +5,9 @@
   const status = panel.querySelector('.campus-map-status');
   const buttons = [...panel.querySelectorAll('[data-campus]')];
   const schools = [
-    { point: [22.568694, 114.088867], zh: '深圳中学 · 泥岗校区', en: 'Shenzhen Middle School · Nigang', dates: '2019.9–2025.6' },
-    { point: [22.589750, 113.967221], zh: '哈尔滨工业大学（深圳）', en: 'Harbin Institute of Technology, Shenzhen', dates: '2025.9–2029.6' }
+    { point: [22.555635, 114.116866], zh: '深圳中学 · 晒布校区', en: 'Shenzhen Middle School · Shaibu', periods: ['2019.9–2022.6', '2024.8–2025.6'] },
+    { point: [22.568694, 114.088867], zh: '深圳中学 · 泥岗校区', en: 'Shenzhen Middle School · Nigang', periods: ['2022.9–2024.7'] },
+    { point: [22.589750, 113.967221], zh: '哈尔滨工业大学（深圳）', en: 'Harbin Institute of Technology, Shenzhen', periods: ['2025.9–2029.6'], expected: true }
   ];
   let map, markers = [], initialization, hasTiles = false, failed = false;
   const english = () => document.documentElement.lang === 'en';
@@ -20,9 +21,12 @@
       const content = document.createElement('div');
       const title = document.createElement('strong');
       title.textContent = english() ? school.en : school.zh;
-      const date = document.createElement('span');
-      date.textContent = school.dates + (index === 1 ? (english() ? ' (expected)' : '（预计）') : '');
-      content.append(title, date);
+      content.append(title);
+      school.periods.forEach(period => {
+        const date = document.createElement('span');
+        date.textContent = period + (school.expected ? (english() ? ' (expected)' : '（预计）') : '');
+        content.append(date);
+      });
       marker.setPopupContent(content);
       const element = marker.getElement();
       if (element) {
@@ -105,7 +109,7 @@
       overview(false);
       updateCopy();
       new ResizeObserver(() => {
-        map.invalidateSize({pan: false});
+        map.invalidateSize({pan: true, animate: false});
         if (buttons.every(button => button.getAttribute('aria-pressed') === 'false')) overview(false);
       }).observe(canvas);
     } catch {
@@ -117,7 +121,9 @@
     await start();
     if (!map) return;
     const index = Number(button.dataset.campus);
-    map.setView(schools[index].point, 15, {animate: animate()});
+    map.stop();
+    map.closePopup();
+    map.setView(schools[index].point, 15, {animate: false});
     markers[index].openPopup();
     buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
   }));
