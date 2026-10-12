@@ -24,7 +24,7 @@ const themeToggle = document.querySelector('.theme-toggle');
 const languageToggle = document.querySelector('.language-toggle');
 const translations = {
   zh: {
-    navNow: '近况', nowTitle: '近况', nowOngoing: '正在读', bookPrevious: '上一本书', bookNext: '下一本书', bookLabel: '滑动阅读书架',
+    navNow: '近况', nowTitle: '近况', nowOngoing: '最近在读', bookPrevious: '上一本书', bookNext: '下一本书', bookLabel: '滑动阅读书架',
     musicTitle: '最近在听', musicHint: '左右滑动，点击封面前往 Apple Music。', musicPrevious: '上一张专辑', musicNext: '下一张专辑', musicLabel: '滑动专辑封面歌单',
     title: '周方璟 · 个人主页', name: '周方璟',
     description: '周方璟，哈尔滨工业大学（深圳）计算机科学与技术专业大二学生。个人项目、随笔与日常。',
