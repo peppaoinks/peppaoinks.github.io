@@ -24,8 +24,8 @@ const themeToggle = document.querySelector('.theme-toggle');
 const languageToggle = document.querySelector('.language-toggle');
 const translations = {
   zh: {
-    navNow: '近况', navMusic: '歌单', nowTitle: '近况', nowOngoing: '正在读', bookPrevious: '上一本书', bookNext: '下一本书', bookLabel: '滑动阅读书架',
-    musicTitle: '歌单', musicDraft: '歌单初选', musicHint: '左右滑动，点击封面前往 Apple Music。', musicPrevious: '上一张专辑', musicNext: '下一张专辑', musicLabel: '滑动专辑封面歌单',
+    navNow: '近况', nowTitle: '近况', nowOngoing: '正在读', bookPrevious: '上一本书', bookNext: '下一本书', bookLabel: '滑动阅读书架',
+    musicTitle: '最近在听', musicHint: '左右滑动，点击封面前往 Apple Music。', musicPrevious: '上一张专辑', musicNext: '下一张专辑', musicLabel: '滑动专辑封面歌单',
     title: '周方璟 · 个人主页', name: '周方璟',
     description: '周方璟，哈尔滨工业大学（深圳）计算机科学与技术专业大二学生。个人项目、随笔与日常。',
     skip: '跳到主要内容', homeLabel: '周方璟 首页', navLabel: '主导航',
@@ -63,8 +63,8 @@ const translations = {
     themeDark: '切换到深色模式', themeLight: '切换到浅色模式'
   },
   en: {
-    navNow: 'Now', navMusic: 'Music', nowTitle: 'Now', nowOngoing: 'Currently reading', bookPrevious: 'Previous book', bookNext: 'Next book', bookLabel: 'Scrollable reading shelf',
-    musicTitle: 'Music', musicDraft: 'First selection', musicHint: 'Swipe through the covers. Select one to listen on Apple Music.', musicPrevious: 'Previous album', musicNext: 'Next album', musicLabel: 'Swipeable album cover playlist',
+    navNow: 'Now', nowTitle: 'Now', nowOngoing: 'Currently reading', bookPrevious: 'Previous book', bookNext: 'Next book', bookLabel: 'Scrollable reading shelf',
+    musicTitle: 'Currently listening', musicHint: 'Swipe through the covers. Select one to listen on Apple Music.', musicPrevious: 'Previous album', musicNext: 'Next album', musicLabel: 'Swipeable album cover playlist',
     title: 'Felixzhou · Personal Website', name: 'Felixzhou',
     description: 'Felixzhou, a second-year Computer Science and Technology student at Harbin Institute of Technology, Shenzhen. Projects, essays, and everyday life.',
     skip: 'Skip to content', homeLabel: 'Felixzhou home', navLabel: 'Main navigation',

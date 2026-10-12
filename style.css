@@ -284,12 +284,12 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 .music-card img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:4px;background:var(--card);transition:transform .25s}
 .music-card:hover img{transform:translateY(-3px)}
 .music-card-number{font-family:var(--font);color:var(--muted);font-size:12px;margin-top:18px}
-.music-card h3{font-family:var(--font);font-size:20px;line-height:1.5;font-weight:600;letter-spacing:-.02em;margin:8px 0}
+.music-card h4{font-family:var(--font);font-size:20px;line-height:1.5;font-weight:600;letter-spacing:-.02em;margin:8px 0}
 .music-card p{font-family:var(--font);margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
 .music-card .music-album{font-size:12px;margin-top:6px}
 .music-platform{font-family:var(--font);font-size:12px;color:var(--muted);margin-top:auto;padding-top:20px}
 @media(max-width:1000px){.music-card{flex-basis:calc((100% - 56px)/3)}}
-@media(max-width:720px){.now-item{padding-top:18px}.now-item h3{font-size:21px;margin-bottom:10px}.now-item p{font-size:17px}.music-rail{gap:20px}.music-card{flex-basis:76%}.music-card h3{font-size:19px}.music-hint{font-size:14px}.music-controls button{width:36px;height:36px}.site-header nav{gap:8px;white-space:nowrap}.site-header nav a{flex-shrink:0}html[lang="en"] .site-header nav{font-size:10px;gap:6px}}
+@media(max-width:720px){.now-item{padding-top:18px}.now-item h3{font-size:21px;margin-bottom:10px}.now-item p{font-size:17px}.music-rail{gap:20px}.music-card{flex-basis:76%}.music-card h4{font-size:19px}.music-hint{font-size:14px}.music-controls button{width:36px;height:36px}.site-header nav{gap:8px;white-space:nowrap}.site-header nav a{flex-shrink:0}html[lang="en"] .site-header nav{font-size:10px;gap:6px}}
 
 /* Reading shelf: full covers, with a glimpse of the next book. */
 .book-shelf{margin-top:0}
@@ -307,3 +307,5 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 @media(prefers-reduced-motion:reduce){.book-cover img,.music-card img{transition:none}}
 
 @media(max-width:360px){html[lang="en"] .site-header nav{font-size:9.5px;gap:4px}}
+
+.listening-shelf{margin-top:42px;padding-top:32px;border-top:1px solid var(--line);scroll-margin-top:130px}
