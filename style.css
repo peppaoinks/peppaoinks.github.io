@@ -292,9 +292,7 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 @media(max-width:720px){.now-item{padding-top:18px}.now-item h3{font-size:21px;margin-bottom:10px}.now-item p{font-size:17px}.music-rail{gap:20px}.music-card{flex-basis:76%}.music-card h3{font-size:19px}.music-hint{font-size:14px}.music-controls button{width:36px;height:36px}.site-header nav{gap:8px;white-space:nowrap}.site-header nav a{flex-shrink:0}html[lang="en"] .site-header nav{font-size:10px;gap:6px}}
 
 /* Reading shelf: full covers, with a glimpse of the next book. */
-.now-focus{display:flex;align-items:baseline;gap:36px}
-.now-focus h3{margin:0}.now-focus p{margin:0}
-.book-shelf{margin-top:36px}
+.book-shelf{margin-top:0}
 .book-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
 .book-heading h3{font-size:23px;font-weight:500;margin:0}
 .book-rail{display:flex;gap:32px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--line) transparent;padding:8px 3px 24px}
@@ -305,7 +303,7 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 .book-card h4{font-family:var(--font);font-size:19px;line-height:1.45;font-weight:500;margin:20px 0 8px}
 .book-card p{font-size:14px;color:var(--muted);margin:0}
 @media(max-width:1000px){.book-card{flex-basis:calc((100% - 64px)/2.4)}.book-cover{height:290px}}
-@media(max-width:720px){.now-focus{display:block}.now-focus h3{margin-bottom:10px}.book-heading h3{font-size:21px}.book-rail{gap:24px}.book-card{flex-basis:68%}.book-cover{height:265px}.book-card h4{font-size:18px}}
+@media(max-width:720px){.book-heading h3{font-size:21px}.book-rail{gap:24px}.book-card{flex-basis:68%}.book-cover{height:265px}.book-card h4{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.book-cover img,.music-card img{transition:none}}
 
 @media(max-width:360px){html[lang="en"] .site-header nav{font-size:9.5px;gap:4px}}
