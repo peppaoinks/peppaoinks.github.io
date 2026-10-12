@@ -1,0 +1,58 @@
+[
+  {
+    "title": "New Romantics (Taylor's Version)",
+    "artist": "Taylor Swift",
+    "album": "1989 (Taylor's Version) [Deluxe]",
+    "url": "https://music.apple.com/cn/album/new-romantics-taylors-version/1713845538?i=1713846253",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/8e/35/6c/8e356cc2-0be4-b83b-d29e-b578623df2ac/23UM1IM34052.rgb.jpg/600x600bb.jpg",
+    "cover": "assets/music/cover-1.webp"
+  },
+  {
+    "title": "Photograph",
+    "artist": "Ed Sheeran",
+    "album": "x (10th Anniversary Edition)",
+    "url": "https://music.apple.com/cn/album/photograph/1747957359?i=1747957549",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/34/29/0b/34290bc3-31b8-3ba3-0d21-b9182a77fe98/5021732391735.jpg/600x600bb.jpg",
+    "cover": "assets/music/cover-2.webp"
+  },
+  {
+    "title": "Blinding Lights",
+    "artist": "Abel Tesfaye",
+    "album": "After Hours",
+    "url": "https://music.apple.com/cn/album/blinding-lights/1499378108?i=1499378607",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6f/bc/e6/6fbce6c4-c38c-72d8-4fd0-66cfff32f679/20UMGIM12176.rgb.jpg/600x600bb.jpg",
+    "cover": "assets/music/cover-3.webp"
+  },
+  {
+    "title": "we can't be friends (wait for your love)",
+    "artist": "Ariana Grande",
+    "album": "eternal sunshine",
+    "url": "https://music.apple.com/cn/album/we-cant-be-friends-wait-for-your-love/1725877944?i=1725878242",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/34/fe/a1/34fea184-6d20-3f50-b4ce-5e1501c1c5ab/24UMGIM00198.rgb.jpg/600x600bb.jpg",
+    "cover": "assets/music/cover-4.webp"
+  },
+  {
+    "title": "Espresso",
+    "artist": "Sabrina Carpenter",
+    "album": "Espresso (Working Late Remixes) - Single",
+    "url": "https://music.apple.com/cn/album/espresso/1749404713?i=1749405136",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/67/8c/f2/678cf293-e1a7-2d47-aea7-b6d412e739f8/24UMGIM60819.rgb.jpg/600x600bb.jpg",
+    "cover": "assets/music/cover-5.webp"
+  },
+  {
+    "title": "爱, 很简单",
+    "artist": "陶喆",
+    "album": "陶喆同名专辑",
+    "url": "https://music.apple.com/cn/album/%E7%88%B1-%E5%BE%88%E7%AE%80%E5%8D%95/1416149926?i=1416149931",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/bb/bd/ddbbbda1-9408-72b2-4c0b-943e648be6c1/190295574086.jpg/600x600bb.jpg",
+    "cover": "assets/music/cover-6.webp"
+  },
+  {
+    "title": "永不失联的爱 (正式版)",
+    "artist": "单依纯",
+    "album": "永不失联的爱 (正式版) - Single",
+    "url": "https://music.apple.com/cn/album/%E6%B0%B8%E4%B8%8D%E5%A4%B1%E8%81%94%E7%9A%84%E7%88%B1-%E6%AD%A3%E5%BC%8F%E7%89%88/1764179137?i=1764179143",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/94/37/c794371d-bf5b-0941-0e2c-ec89b519fa7b/4894972324297.jpg/600x600bb.jpg",
+    "cover": "assets/music/cover-7.webp"
+  }
+]

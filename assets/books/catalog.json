@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Dark Matter",
+    "author": "Blake Crouch",
+    "cover": "dark-matter.webp",
+    "source": "https://www.penguinrandomhouse.com/books/253400/dark-matter-by-blake-crouch/",
+    "artwork": "https://images4.penguinrandomhouse.com/cover/9781101904244"
+  },
+  {
+    "title": "The Ballad of Songbirds and Snakes",
+    "author": "Suzanne Collins",
+    "cover": "songbirds-and-snakes.webp",
+    "source": "https://www.scholastic.com/newsroom/online-press-kits/hunger-games-series.html",
+    "artwork": "https://www.scholastic.com/content/dam/newsroom/press-kit/hunger-games/Ballad_of_Songbirds_and_Snakes_BookCover.jpg"
+  },
+  {
+    "title": "Manacled",
+    "author": "SenLinYu",
+    "cover": "manacled.webp",
+    "source": "https://www.goodreads.com/work/editions/72973727-manacled?expanded=false",
+    "artwork": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1675561913l/52122096.jpg"
+  },
+  {
+    "title": "Sunrise on the Reaping",
+    "author": "Suzanne Collins",
+    "cover": "sunrise-on-the-reaping.webp",
+    "source": "https://www.scholastic.com/newsroom/online-press-kits/hunger-games-series.html",
+    "artwork": "https://www.scholastic.com/content/dam/newsroom/press-kit/hunger-games/SunriseOnTheReapingBookCover.jpg"
+  }
+]

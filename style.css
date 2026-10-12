@@ -182,7 +182,7 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 .hero-art .art-bottom{font-size:12px}
 
 .gallery-caption[hidden]{display:none}
-.sponsor-code{--qr-paper:#f5f7ef;--qr-ink:#173124;width:300px;max-width:100%;flex-shrink:0;padding:14px 14px 18px;border:1px solid var(--line);border-radius:8px;background:var(--qr-paper);text-align:center}
+.sponsor-code{--qr-paper:#f5f7ef;--qr-ink:#173124;width:300px;max-width:100%;flex-shrink:0;padding:14px 14px 18px;border:1px solid transparent;border-radius:8px;background:var(--qr-paper);text-align:center}
 :root[data-theme="dark"] .sponsor-code{--qr-paper:var(--bg);--qr-ink:#f0d884;border-color:transparent}
 .sponsor-code .qr-background{fill:var(--qr-paper)}
 .sponsor-code .qr-modules{fill:var(--qr-ink)}
@@ -212,12 +212,11 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 .site-header .brand{position:absolute;left:calc(50% * var(--brand-shift));top:50%;transform:translate(calc(-50% * var(--brand-shift)),-50%);font-size:calc(30px + 10px * var(--brand-shift));will-change:transform}
 .site-header nav{gap:18px}
 .site-header.is-scrolled{box-shadow:0 8px 18px -18px #0009}
-@media(max-width:1280px){
+
   .site-header{display:grid;grid-template-columns:1fr auto;height:auto;padding-top:22px;padding-bottom:15px;row-gap:15px}
   .site-header .brand{grid-area:auto;top:22px;transform:translateX(calc(-50% * var(--brand-shift)))}
   .site-header .header-actions{grid-column:2;grid-row:1;margin-left:0;gap:8px}
   .site-header nav{grid-column:1/-1;grid-row:2;margin:0;justify-content:space-between;gap:15px;font-size:12px}
-}
 @media(max-width:720px){
   .site-header .brand{font-size:calc(27px + 5px * var(--brand-shift))}
   .site-header nav{gap:10px;font-size:11px}
@@ -269,3 +268,44 @@ footer{font-size:12px;align-items:center;flex-wrap:wrap}
 }
 
 .inline-official-link,.about-description .inline-official-link{border-bottom:0;padding-bottom:0;text-decoration:none}.inline-official-link:hover{color:var(--orange)}
+
+/* Current activities and a horizontally browsable record shelf. */
+.now-item{border-top:1px solid var(--line);padding:22px 0 0}
+.now-item h3{margin:0 0 16px;font-size:23px}
+.now-item p{margin:0;color:var(--muted);font-size:18px;line-height:1.9;white-space:pre-line}
+.now .section-index time{font-variant-numeric:tabular-nums}
+.music-controls{display:flex;gap:10px}
+.music-controls button{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--text);font-size:22px;cursor:pointer}
+.music-controls button:hover:not(:disabled){background:var(--card);border-color:var(--orange)}
+.music-controls button:disabled{opacity:.3;cursor:default}
+.music-hint{font-size:16px;color:var(--muted);line-height:1.8;margin:0 0 28px}
+.music-rail{display:flex;gap:28px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--line) transparent;padding:4px 2px 22px}
+.music-card{position:relative;flex:0 0 calc((100% - 84px)/4);min-width:0;scroll-snap-align:start;scroll-margin-left:2px;display:flex;flex-direction:column;align-items:flex-start}
+.music-card img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:4px;background:var(--card);transition:transform .25s}
+.music-card:hover img{transform:translateY(-3px)}
+.music-card-number{font-family:var(--font);color:var(--muted);font-size:12px;margin-top:18px}
+.music-card h3{font-family:var(--font);font-size:20px;line-height:1.5;font-weight:600;letter-spacing:-.02em;margin:8px 0}
+.music-card p{font-family:var(--font);margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
+.music-card .music-album{font-size:12px;margin-top:6px}
+.music-platform{font-family:var(--font);font-size:12px;color:var(--muted);margin-top:auto;padding-top:20px}
+@media(max-width:1000px){.music-card{flex-basis:calc((100% - 56px)/3)}}
+@media(max-width:720px){.now-item{padding-top:18px}.now-item h3{font-size:21px;margin-bottom:10px}.now-item p{font-size:17px}.music-rail{gap:20px}.music-card{flex-basis:76%}.music-card h3{font-size:19px}.music-hint{font-size:14px}.music-controls button{width:36px;height:36px}.site-header nav{gap:8px;white-space:nowrap}.site-header nav a{flex-shrink:0}html[lang="en"] .site-header nav{font-size:10px;gap:6px}}
+
+/* Reading shelf: full covers, with a glimpse of the next book. */
+.now-focus{display:flex;align-items:baseline;gap:36px}
+.now-focus h3{margin:0}.now-focus p{margin:0}
+.book-shelf{margin-top:36px}
+.book-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.book-heading h3{font-size:23px;font-weight:500;margin:0}
+.book-rail{display:flex;gap:32px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--line) transparent;padding:8px 3px 24px}
+.book-card{flex:0 0 calc((100% - 96px)/3.35);min-width:0;scroll-snap-align:start}
+.book-cover{height:330px;display:flex;align-items:flex-end;justify-content:flex-start}
+.book-cover img{display:block;max-width:100%;height:100%;object-fit:contain;object-position:left bottom;border-radius:2px;box-shadow:6px 8px 15px #0002;transition:transform .2s}
+.book-card:hover img{transform:translateY(-4px)}
+.book-card h4{font-family:var(--font);font-size:19px;line-height:1.45;font-weight:500;margin:20px 0 8px}
+.book-card p{font-size:14px;color:var(--muted);margin:0}
+@media(max-width:1000px){.book-card{flex-basis:calc((100% - 64px)/2.4)}.book-cover{height:290px}}
+@media(max-width:720px){.now-focus{display:block}.now-focus h3{margin-bottom:10px}.book-heading h3{font-size:21px}.book-rail{gap:24px}.book-card{flex-basis:68%}.book-cover{height:265px}.book-card h4{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.book-cover img,.music-card img{transition:none}}
+
+@media(max-width:360px){html[lang="en"] .site-header nav{font-size:9.5px;gap:4px}}
