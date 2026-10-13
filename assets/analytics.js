@@ -7,7 +7,7 @@
 
   const tracker = document.createElement('script');
   tracker.async = true;
-  tracker.src = 'https://gc.zgo.at/count.js';
+  tracker.src = 'assets/vendor/goatcounter/count.js?v=c031008';
   tracker.setAttribute('data-goatcounter', `${dashboardUrl}/count`);
   tracker.setAttribute('data-goatcounter-settings', JSON.stringify({
     path: window.location.pathname === '/index.html' ? '/' : window.location.pathname,

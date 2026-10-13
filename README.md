@@ -28,6 +28,7 @@
 ## 访客统计
 
 统计接入使用 [GoatCounter](https://www.goatcounter.com/)，配置位于 `assets/analytics.js`。
+官方 `count.js` 随网站托管于 `assets/vendor/goatcounter/`，避免依赖 `gc.zgo.at` 加载。源码固定在官方仓库提交 `c031008a8d28c85b36708824f23b28957e7ed262`，保留 ISC 许可证；来源和更新方式见该目录 `SOURCE.md`，不会自动跟随上游更新。
 已配置站主提供的后台地址：https://peppaoinks.goatcounter.com/ 。2026-10-13 接入；上线后的访问开始计入，无法补回此前未采集的记录。未登录访问后台已确认显示登录页。
 
 - 在上述后台登录后查看每日访问量、独立访客与访问来源；后台私密性由 GoatCounter 账号设置控制，保持仅登录用户可见。显示日期如需使用北京时间，可在后台设置时区为 `Asia/Shanghai`。
