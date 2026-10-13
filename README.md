@@ -25,6 +25,19 @@
 
 直接打开 `index.html`，或在此目录运行 `python3 -m http.server 8080` 后访问 `http://localhost:8080`。
 
+## 访客统计
+
+统计接入使用 [GoatCounter](https://www.goatcounter.com/)，配置位于 `assets/analytics.js`。
+已配置站主提供的后台地址：https://peppaoinks.goatcounter.com/ 。2026-10-13 接入；上线后的访问开始计入，无法补回此前未采集的记录。未登录访问后台已确认显示登录页。
+
+- 在上述后台登录后查看每日访问量、独立访客与访问来源；后台私密性由 GoatCounter 账号设置控制，保持仅登录用户可见。显示日期如需使用北京时间，可在后台设置时区为 `Asia/Shanghai`。
+- 启用后只在 `peppaoinks.github.io` 收集页面访问，本地文件及本地预览不计入；语言、主题切换与页内导航不额外增加访问。
+- 首页 `/` 和 `/index.html` 合并统计，不将网址查询参数和锚点写入页面路径；标题统一，避免中英文标题拆分记录。
+- 不启用点击事件、会话回放或公开计数器，不把密码、API key 或后台访问令牌放进网站源码。
+- 要排除自己的访问，可在常用浏览器访问 `https://peppaoinks.github.io/#toggle-goatcounter`，按官方脚本提示切换；再次访问会恢复统计。此设置仅对当前浏览器生效。
+- 数据从启用后开始记录。广告拦截、网络连接失败和关闭 JavaScript 都可能导致漏计；访问来源取决于浏览器是否发送来源信息。
+- 官方说明：[接入](https://www.goatcounter.com/help/start)、[排除自己的访问](https://www.goatcounter.com/help/skip-dev)、[隐私与数据存储](https://www.goatcounter.com/help/privacy)。
+
 ## 图标来源
 
 除自行绘制的 LinkedIn 字母图标外，社交平台图标来自 [Simple Icons](https://github.com/simple-icons/simple-icons)，采用 CC0 授权。品牌名称及标识归各自权利人所有。
