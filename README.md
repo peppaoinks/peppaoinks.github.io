@@ -6,7 +6,7 @@
 
 当前展示：周方璟 / Felixzhou，哈尔滨工业大学（深圳）计算机科学与技术专业大二。
 
-小红书、知乎、LinkedIn 和 GitHub 已连接；公众号 NeonDynamics 以名称展示；微信赞赏码直接显示在页面底部，无需点击或跳转。随笔集目前为空，不含示例文章。
+小红书、Instagram（[@mrzhoufj](https://www.instagram.com/mrzhoufj/)）、知乎、LinkedIn 和 GitHub 已连接；公众号 NeonDynamics 以名称展示；微信赞赏码直接显示在页面底部，无需点击或跳转。随笔集目前为空，不含示例文章。
 
 ## 修改内容
 
