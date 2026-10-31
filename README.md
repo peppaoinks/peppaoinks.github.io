@@ -82,3 +82,7 @@
 歌曲名称、歌手、专辑与链接来自 Apple Music 官方目录，出处保存在 `assets/music/catalog.json`。封面按网页尺寸保存为 600 像素 WebP，图片权利属于相应权利人。
 
 阅读书架位于近况区，当前列出用户提供的四本书。支持原生横向滑动、左右按钮和方向键；跟随中英文及深浅色主题。封面压缩为本地 WebP，来源记录在 `assets/books/catalog.json`。Manacled 使用 Goodreads 收录的版本封面。近况仅保留阅读书架，不显示“最近在忙”和未来计划。浅色赞赏码取消外框。
+
+## 发布前检查
+
+每次更新网站内容时，同步检查 `index.html` 页脚 `.last-updated` 中的 `time`：`datetime` 使用实际内容更新日期（YYYY-MM-DD），显示使用 YYYY.MM.DD；以北京时间为准。不要使用访问当天日期代替内容更新日期。
